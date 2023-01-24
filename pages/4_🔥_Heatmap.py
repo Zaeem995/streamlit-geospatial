@@ -44,7 +44,7 @@ with st.expander("See source code"):
     with st.echo():
         st.title('Heatmaps')
         filepath = dataframe
-        m = leafmap.Map(tiles="stamentoner")
+        m = leafmap.Map(center=[40, -100], zoom=4, tiles="stamentoner")
         m.add_heatmap(
             filepath,
             latitude="Lat",
