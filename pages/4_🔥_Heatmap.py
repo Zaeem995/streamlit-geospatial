@@ -54,5 +54,5 @@ with st.expander("See source code"):
             name="Heat map",
             radius=20,
         )
-
-        m.to_streamlit(height=700)
+        
+m.to_streamlit(height=700)
