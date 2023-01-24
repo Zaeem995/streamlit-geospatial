@@ -35,16 +35,15 @@ if uploaded_file is not None:
     st.write(string_data)
 # Can be used wherever a "file-like" object is accepted:
 dataframe = pd.read_csv(uploaded_file)
-st.write(dataframe)
-    
-filepath = dataframe 
+st.write(dataframe) 
 
 
 st.title("Heatmap")
 
 with st.expander("See source code"):
     with st.echo():
-        st.title('Heatmaps')        
+        st.title('Heatmaps')
+        filepath = dataframe
         m = leafmap.Map(tiles="stamentoner")
         m.add_heatmap(
             filepath,
