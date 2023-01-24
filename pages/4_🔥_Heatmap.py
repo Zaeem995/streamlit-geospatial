@@ -34,24 +34,26 @@ if uploaded_file is not None:
     string_data = stringio.read()
 #     st.write(string_data)
 # Can be used wherever a "file-like" object is accepted:
-dataframe = pd.read_csv(uploaded_file)
+    dataframe = pd.read_csv(uploaded_file)
 # st.write(dataframe) 
 
 
-st.title("Heatmap")
+    st.title("Heatmap")
 
-with st.expander("See source code"):
-    with st.echo():
-        st.title('Heatmaps')
-        filepath = dataframe
-        m = leafmap.Map(center=[40, -100], zoom=4, tiles="stamentoner")
-        m.add_heatmap(
-            filepath,
-            latitude="Lat",
-            longitude="Long",
-            value="Dummy",
-            name="Heat map",
-            radius=20,
-        )
+    with st.expander("See source code"):
+        with st.echo():
+            st.title('Heatmaps')
+            filepath = dataframe
+            m = leafmap.Map(center=[15, 80], zoom=4, tiles="stamentoner")
+            m.add_heatmap(
+                filepath,
+                latitude="Lat",
+                longitude="Long",
+                value="Dummy",
+                name="Heat map",
+                radius=20,
+            ),
+    else:
+        print("Upload Data to See Map")
         
 m.to_streamlit(height=700)
