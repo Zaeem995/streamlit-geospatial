@@ -53,7 +53,7 @@ if uploaded_file is not None:
                 name="Heat map",
                 radius=20,
             ),
+    m.to_streamlit(height=700)
 else:
     print("Upload Data to See Map")
         
-m.to_streamlit(height=700)
