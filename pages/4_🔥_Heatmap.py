@@ -44,7 +44,8 @@ with st.expander("See source code"):
             dataframe = pd.read_csv(uploaded_file)
             st.write(dataframe)
     
-        filepath = dataframe 
+            filepath = dataframe 
+        
         m = leafmap.Map(tiles="stamentoner")
         m.add_heatmap(
             filepath,
